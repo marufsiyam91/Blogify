@@ -7,7 +7,7 @@ import { FaMoon } from "react-icons/fa6";
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   return (
-    <div className="w-full h-[90px] top-0 mx-auto flex items-center justify-center fixed bg-[#f5f9fdf8] dark:bg-[#181A1B] shadow-sm">
+    <div className="w-full h-[90px] top-0 mx-auto flex items-center justify-center fixed bg-[#f5f9fdf8] dark:bg-[#181A1B] shadow-sm z-10">
       <div className="max-w-screen-xl w-full p-4 flex justify-between">
         <div className="flex items-center gap-14 ">
           <NavLink to={"/"}>

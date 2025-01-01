@@ -14,7 +14,7 @@ const MainLayout = () => {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
-      <div className="mt-[90px] min-h-[100vh] bg-[#BBD6FD] dark:bg-[#2C2F31]">
+      <div className="mt-[90px] bg-[#BBD6FD] dark:bg-[#2C2F31]">
         <Outlet />
       </div>
       <Footer />
