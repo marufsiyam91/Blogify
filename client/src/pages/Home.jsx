@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import HeroCard from "./../components/HeroCard";
 import Sidebar from "../components/Sidebar";
+import Category from "../components/Category";
+import BlogCard from "../components/BlogCard";
 
 const Home = () => {
   const [sidebarTop, setSidebarTop] = useState(0);
@@ -27,10 +29,14 @@ const Home = () => {
 
   return (
     <div className="dark:text-[#CBC6C0] text-[#282b2c] mx-auto max-w-screen-xl px-4 py-6 min-h-screen">
-      <h2 className="mb-6 text-3xl">Where Thoughts Meet Words.</h2>
+      <h2 className="mb-8 text-4xl font-semibold">Where Thoughts Meet Words.</h2>
       <div className="flex items-start justify-between gap-8">
-            {/* <HeroCard /> */}
-            <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-14">
+            <HeroCard />
+            <Category/>
+            <BlogCard/>
+        </div>
+            {/* <div className="flex flex-col gap-6">
             <HeroCard />
             <HeroCard />
             <HeroCard />
@@ -41,7 +47,7 @@ const Home = () => {
             <HeroCard />
             <HeroCard />
             <HeroCard />
-            </div>
+            </div> */}
         <div
           className="sidebar sticky"
           style={{
