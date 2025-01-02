@@ -18,8 +18,8 @@ const HeroCard = () => {
                     </div>
                     <h2 className='text-5xl'>The Journey of Self-Discovery: How Embracing Change Leads to Personal Growth</h2>
     
-                    <div className='mt-6'>
-                        <span>2 min read</span> <span>.</span> <span>2 views</span>
+                    <div className='mt-6 flex gap-2'>
+                        <h5>2 min read</h5> <h5>.</h5> <h5>2 views</h5>
                     </div>
                 </div>
                 </div>
