@@ -19,3 +19,39 @@ const postBlog = async (req, res) => {
         })
     }
 }
+
+
+const getBlogs = async (req, res) => {
+    try {
+        const blogs = await Blog.find();
+
+        res.status(200).send(blogs)
+    } catch (error) {
+        res.json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+const getBlog = async (req, res) => {
+    try {
+        const blog = await Blog.findById(req.params.id);
+
+        if (!blog) {
+            return res.status(404).json({ message: 'Blog not found' });
+          }
+      
+          blog.views += 1;
+          await blog.save();
+
+        res.status(200).send(blog)
+    } catch (error) {
+        res.json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+
